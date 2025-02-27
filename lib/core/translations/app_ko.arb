@@ -1,23 +1,55 @@
 {
-    "@@locale": "ko",
-    "homeSearchHint": "검색어를 입력하세요",
-    "@homeSearchHint": {
-        "description": "Home Search Hint"
-    },
-    "homeProductReviewLabel": "제일 핫한 리뷰를 만나보세요",
-    "@homeProductReviewLabel": {
-        "description": "Home Product Review Label"
-    },
-    "homeProductReviewRanking": "리뷰️  랭킹⭐ top 3",
-    "@homeProductReviewRanking": {
-        "description": "Home Product Review Ranking"
-    },
-    "homeReviewerLabel": "골드 계급 사용자들이예요",
-    "@homeReviewerLabel": {
-        "description": "Home Reviewer Label"
-    },
-    "homeReviewerRanking": "베스트 리뷰어 🏆 Top10",
-    "@homeReviewerRanking": {
-        "description": "Home Reviewer Ranking"
-    }
+  "@@locale": "ko",
+  "homeSearchHint": "검색어를 입력하세요",
+  "@homeSearchHint": {
+    "description": "Home Search Hint"
+  },
+  "homeProductReviewLabel": "제일 핫한 리뷰를 만나보세요",
+  "@homeProductReviewLabel": {
+    "description": "Home Product Review Label"
+  },
+  "homeProductReviewRanking": "리뷰️  랭킹⭐ top 3",
+  "@homeProductReviewRanking": {
+    "description": "Home Product Review Ranking"
+  },
+  "homeReviewerLabel": "골드 계급 사용자들이예요",
+  "@homeReviewerLabel": {
+    "description": "Home Reviewer Label"
+  },
+  "homeReviewerRanking": "베스트 리뷰어 🏆 Top10",
+  "@homeReviewerRanking": {
+    "description": "Home Reviewer Ranking"
+  },
+  "homeFooterLogo": "LOGO Inc.",
+  "@homeFooterLogo": {
+    "description": "Home Footer Logo"
+  },
+  "homeFooterAbout": "회사 소개 ",
+  "@homeFooterAbout": {
+    "description": "Home Footer About"
+  },
+  "homeFooterCareer": "인재 채용",
+  "@homeFooterCareer": {
+    "description": "Home Footer Career"
+  },
+  "homeFooterBlog": "기술 블로그",
+  "@homeFooterBlog": {
+    "description": "Home Footer Blog"
+  },
+  "homeFooterReviewCopyright": "리뷰 저작권",
+  "@homeFooterReviewCopyright": {
+    "description": "Home Footer Review Copyright"
+  },
+  "homeFooterEmail": "review@logo.com",
+  "@homeFooterEmail": {
+    "description": "Home Footer Email"
+  },
+  "homeFooterLanguage": "KOR",
+  "@homeFooterLanguage": {
+    "description": "Home Footer Language"
+  },
+  "homeFooterCopyright": "@2022-2022 LOGO Lab, Inc. (주)아무개  서울시 강남구",
+  "@homeFooterCopyright": {
+    "description": "Home Footer Copyright"
+  }
 }

@@ -22,4 +22,28 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get homeReviewerRanking => '베스트 리뷰어 🏆 Top10';
+
+  @override
+  String get homeFooterLogo => 'LOGO Inc.';
+
+  @override
+  String get homeFooterAbout => '회사 소개 ';
+
+  @override
+  String get homeFooterCareer => '인재 채용';
+
+  @override
+  String get homeFooterBlog => '기술 블로그';
+
+  @override
+  String get homeFooterReviewCopyright => '리뷰 저작권';
+
+  @override
+  String get homeFooterEmail => 'review@logo.com';
+
+  @override
+  String get homeFooterLanguage => 'KOR';
+
+  @override
+  String get homeFooterCopyright => '@2022-2022 LOGO Lab, Inc. (주)아무개  서울시 강남구';
 }

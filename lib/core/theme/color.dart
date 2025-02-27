@@ -14,6 +14,7 @@ class AppColor {
   static const silver = Color(0xffA0A0A0);
   static const bronze = Color(0xffC8903D);
   static const purple = Color(0xff3E3DC5);
+  static const divider = Color(0xffC8C8C8);
 
   static const textFieldGradient = [Color(0xff74FBDE), Color(0xff3C41BF)];
 }

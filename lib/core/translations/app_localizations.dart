@@ -122,6 +122,54 @@ abstract class AppLocalizations {
   /// In ko, this message translates to:
   /// **'베스트 리뷰어 🏆 Top10'**
   String get homeReviewerRanking;
+
+  /// Home Footer Logo
+  ///
+  /// In ko, this message translates to:
+  /// **'LOGO Inc.'**
+  String get homeFooterLogo;
+
+  /// Home Footer About
+  ///
+  /// In ko, this message translates to:
+  /// **'회사 소개 '**
+  String get homeFooterAbout;
+
+  /// Home Footer Career
+  ///
+  /// In ko, this message translates to:
+  /// **'인재 채용'**
+  String get homeFooterCareer;
+
+  /// Home Footer Blog
+  ///
+  /// In ko, this message translates to:
+  /// **'기술 블로그'**
+  String get homeFooterBlog;
+
+  /// Home Footer Review Copyright
+  ///
+  /// In ko, this message translates to:
+  /// **'리뷰 저작권'**
+  String get homeFooterReviewCopyright;
+
+  /// Home Footer Email
+  ///
+  /// In ko, this message translates to:
+  /// **'review@logo.com'**
+  String get homeFooterEmail;
+
+  /// Home Footer Language
+  ///
+  /// In ko, this message translates to:
+  /// **'KOR'**
+  String get homeFooterLanguage;
+
+  /// Home Footer Copyright
+  ///
+  /// In ko, this message translates to:
+  /// **'@2022-2022 LOGO Lab, Inc. (주)아무개  서울시 강남구'**
+  String get homeFooterCopyright;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
