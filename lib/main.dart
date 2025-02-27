@@ -2,6 +2,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:hyperhire_assigment/core/theme/color.dart';
 import 'package:hyperhire_assigment/router/app_router.dart';
 
 void main() {
@@ -21,7 +22,16 @@ class MyApp extends StatelessWidget {
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       title: 'Hyperhire Assignment Application',
-      theme: ThemeData(),
+      theme: ThemeData(
+        useMaterial3: false,
+        fontFamily: 'NotoSansKr',
+        appBarTheme: AppBarTheme(
+          backgroundColor: AppColor.white,
+          foregroundColor: AppColor.iris,
+          shadowColor: AppColor.black,
+          elevation: 1,
+        )
+      ),
       localizationsDelegates: [
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
