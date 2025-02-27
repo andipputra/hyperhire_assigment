@@ -20,6 +20,7 @@ mixin _$HomeState {
   List<BannerData> get listBanner => throw _privateConstructorUsedError;
   int get currentBannerIndex => throw _privateConstructorUsedError;
   List<Product> get topProducts => throw _privateConstructorUsedError;
+  List<User> get topReviewers => throw _privateConstructorUsedError;
 
   /// Create a copy of HomeState
   /// with the given fields replaced by the non-null parameter values.
@@ -37,6 +38,7 @@ abstract class $HomeStateCopyWith<$Res> {
     List<BannerData> listBanner,
     int currentBannerIndex,
     List<Product> topProducts,
+    List<User> topReviewers,
   });
 }
 
@@ -58,6 +60,7 @@ class _$HomeStateCopyWithImpl<$Res, $Val extends HomeState>
     Object? listBanner = null,
     Object? currentBannerIndex = null,
     Object? topProducts = null,
+    Object? topReviewers = null,
   }) {
     return _then(
       _value.copyWith(
@@ -76,6 +79,11 @@ class _$HomeStateCopyWithImpl<$Res, $Val extends HomeState>
                     ? _value.topProducts
                     : topProducts // ignore: cast_nullable_to_non_nullable
                         as List<Product>,
+            topReviewers:
+                null == topReviewers
+                    ? _value.topReviewers
+                    : topReviewers // ignore: cast_nullable_to_non_nullable
+                        as List<User>,
           )
           as $Val,
     );
@@ -95,6 +103,7 @@ abstract class _$$HomeStateImplCopyWith<$Res>
     List<BannerData> listBanner,
     int currentBannerIndex,
     List<Product> topProducts,
+    List<User> topReviewers,
   });
 }
 
@@ -115,6 +124,7 @@ class __$$HomeStateImplCopyWithImpl<$Res>
     Object? listBanner = null,
     Object? currentBannerIndex = null,
     Object? topProducts = null,
+    Object? topReviewers = null,
   }) {
     return _then(
       _$HomeStateImpl(
@@ -133,6 +143,11 @@ class __$$HomeStateImplCopyWithImpl<$Res>
                 ? _value._topProducts
                 : topProducts // ignore: cast_nullable_to_non_nullable
                     as List<Product>,
+        topReviewers:
+            null == topReviewers
+                ? _value._topReviewers
+                : topReviewers // ignore: cast_nullable_to_non_nullable
+                    as List<User>,
       ),
     );
   }
@@ -145,8 +160,10 @@ class _$HomeStateImpl implements _HomeState {
     final List<BannerData> listBanner = const [],
     this.currentBannerIndex = 0,
     final List<Product> topProducts = const [],
+    final List<User> topReviewers = const [],
   }) : _listBanner = listBanner,
-       _topProducts = topProducts;
+       _topProducts = topProducts,
+       _topReviewers = topReviewers;
 
   final List<BannerData> _listBanner;
   @override
@@ -169,9 +186,18 @@ class _$HomeStateImpl implements _HomeState {
     return EqualUnmodifiableListView(_topProducts);
   }
 
+  final List<User> _topReviewers;
+  @override
+  @JsonKey()
+  List<User> get topReviewers {
+    if (_topReviewers is EqualUnmodifiableListView) return _topReviewers;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_topReviewers);
+  }
+
   @override
   String toString() {
-    return 'HomeState(listBanner: $listBanner, currentBannerIndex: $currentBannerIndex, topProducts: $topProducts)';
+    return 'HomeState(listBanner: $listBanner, currentBannerIndex: $currentBannerIndex, topProducts: $topProducts, topReviewers: $topReviewers)';
   }
 
   @override
@@ -188,6 +214,10 @@ class _$HomeStateImpl implements _HomeState {
             const DeepCollectionEquality().equals(
               other._topProducts,
               _topProducts,
+            ) &&
+            const DeepCollectionEquality().equals(
+              other._topReviewers,
+              _topReviewers,
             ));
   }
 
@@ -197,6 +227,7 @@ class _$HomeStateImpl implements _HomeState {
     const DeepCollectionEquality().hash(_listBanner),
     currentBannerIndex,
     const DeepCollectionEquality().hash(_topProducts),
+    const DeepCollectionEquality().hash(_topReviewers),
   );
 
   /// Create a copy of HomeState
@@ -213,6 +244,7 @@ abstract class _HomeState implements HomeState {
     final List<BannerData> listBanner,
     final int currentBannerIndex,
     final List<Product> topProducts,
+    final List<User> topReviewers,
   }) = _$HomeStateImpl;
 
   @override
@@ -221,6 +253,8 @@ abstract class _HomeState implements HomeState {
   int get currentBannerIndex;
   @override
   List<Product> get topProducts;
+  @override
+  List<User> get topReviewers;
 
   /// Create a copy of HomeState
   /// with the given fields replaced by the non-null parameter values.

@@ -16,4 +16,10 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get homeProductReviewRanking => '리뷰️  랭킹⭐ top 3';
+
+  @override
+  String get homeReviewerLabel => '골드 계급 사용자들이예요';
+
+  @override
+  String get homeReviewerRanking => '베스트 리뷰어 🏆 Top10';
 }

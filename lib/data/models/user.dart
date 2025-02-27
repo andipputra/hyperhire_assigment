@@ -8,5 +8,6 @@ class User with _$User {
   const factory User({
     required String name,
     required int rank,
+    required String image,
   }) = _User;
 }

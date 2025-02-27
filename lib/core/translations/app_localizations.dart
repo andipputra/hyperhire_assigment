@@ -110,6 +110,18 @@ abstract class AppLocalizations {
   /// In ko, this message translates to:
   /// **'리뷰️  랭킹⭐ top 3'**
   String get homeProductReviewRanking;
+
+  /// Home Reviewer Label
+  ///
+  /// In ko, this message translates to:
+  /// **'골드 계급 사용자들이예요'**
+  String get homeReviewerLabel;
+
+  /// Home Reviewer Ranking
+  ///
+  /// In ko, this message translates to:
+  /// **'베스트 리뷰어 🏆 Top10'**
+  String get homeReviewerRanking;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

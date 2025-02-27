@@ -3,7 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hyperhire_assigment/core/theme/color.dart';
 import 'package:hyperhire_assigment/core/theme/text_style.dart';
 import 'package:hyperhire_assigment/core/translations/app_localizations.dart';
-import 'package:hyperhire_assigment/ui/view/pages/home/components/home_product_item.dart';
+import 'package:hyperhire_assigment/ui/view/pages/home/components/home_top_product_item.dart';
 import 'package:hyperhire_assigment/ui/view_models/home/home_view_model.dart';
 
 class HomeTopProduct extends ConsumerWidget {
@@ -26,6 +26,8 @@ class HomeTopProduct extends ConsumerWidget {
             spacing: 16,
             children: [
               Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                spacing: 2,
                 children: [
                   Text(
                     translation?.homeProductReviewLabel ?? '',
@@ -46,7 +48,7 @@ class HomeTopProduct extends ConsumerWidget {
             physics: NeverScrollableScrollPhysics(),
             itemBuilder:
                 (context, index) =>
-                    HomeProductItem(product: topProducts[index]),
+                    HomeTopProductItem(product: topProducts[index]),
             separatorBuilder: (context, index) => SizedBox(height: 16),
             itemCount: topProducts.length,
           ),

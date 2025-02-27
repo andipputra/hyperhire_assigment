@@ -4,8 +4,8 @@ import 'package:hyperhire_assigment/core/theme/color.dart';
 import 'package:hyperhire_assigment/core/theme/text_style.dart';
 import 'package:hyperhire_assigment/data/models/product.dart';
 
-class HomeProductItem extends StatelessWidget {
-  const HomeProductItem({super.key, required this.product});
+class HomeTopProductItem extends StatelessWidget {
+  const HomeTopProductItem({super.key, required this.product});
 
   final Product product;
 

@@ -19,6 +19,7 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$User {
   String get name => throw _privateConstructorUsedError;
   int get rank => throw _privateConstructorUsedError;
+  String get image => throw _privateConstructorUsedError;
 
   /// Create a copy of User
   /// with the given fields replaced by the non-null parameter values.
@@ -31,7 +32,7 @@ abstract class $UserCopyWith<$Res> {
   factory $UserCopyWith(User value, $Res Function(User) then) =
       _$UserCopyWithImpl<$Res, User>;
   @useResult
-  $Res call({String name, int rank});
+  $Res call({String name, int rank, String image});
 }
 
 /// @nodoc
@@ -48,7 +49,7 @@ class _$UserCopyWithImpl<$Res, $Val extends User>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? name = null, Object? rank = null}) {
+  $Res call({Object? name = null, Object? rank = null, Object? image = null}) {
     return _then(
       _value.copyWith(
             name:
@@ -61,6 +62,11 @@ class _$UserCopyWithImpl<$Res, $Val extends User>
                     ? _value.rank
                     : rank // ignore: cast_nullable_to_non_nullable
                         as int,
+            image:
+                null == image
+                    ? _value.image
+                    : image // ignore: cast_nullable_to_non_nullable
+                        as String,
           )
           as $Val,
     );
@@ -75,7 +81,7 @@ abstract class _$$UserImplCopyWith<$Res> implements $UserCopyWith<$Res> {
   ) = __$$UserImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String name, int rank});
+  $Res call({String name, int rank, String image});
 }
 
 /// @nodoc
@@ -89,7 +95,7 @@ class __$$UserImplCopyWithImpl<$Res>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? name = null, Object? rank = null}) {
+  $Res call({Object? name = null, Object? rank = null, Object? image = null}) {
     return _then(
       _$UserImpl(
         name:
@@ -102,6 +108,11 @@ class __$$UserImplCopyWithImpl<$Res>
                 ? _value.rank
                 : rank // ignore: cast_nullable_to_non_nullable
                     as int,
+        image:
+            null == image
+                ? _value.image
+                : image // ignore: cast_nullable_to_non_nullable
+                    as String,
       ),
     );
   }
@@ -110,16 +121,22 @@ class __$$UserImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$UserImpl implements _User {
-  const _$UserImpl({required this.name, required this.rank});
+  const _$UserImpl({
+    required this.name,
+    required this.rank,
+    required this.image,
+  });
 
   @override
   final String name;
   @override
   final int rank;
+  @override
+  final String image;
 
   @override
   String toString() {
-    return 'User(name: $name, rank: $rank)';
+    return 'User(name: $name, rank: $rank, image: $image)';
   }
 
   @override
@@ -128,11 +145,12 @@ class _$UserImpl implements _User {
         (other.runtimeType == runtimeType &&
             other is _$UserImpl &&
             (identical(other.name, name) || other.name == name) &&
-            (identical(other.rank, rank) || other.rank == rank));
+            (identical(other.rank, rank) || other.rank == rank) &&
+            (identical(other.image, image) || other.image == image));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, name, rank);
+  int get hashCode => Object.hash(runtimeType, name, rank, image);
 
   /// Create a copy of User
   /// with the given fields replaced by the non-null parameter values.
@@ -144,13 +162,18 @@ class _$UserImpl implements _User {
 }
 
 abstract class _User implements User {
-  const factory _User({required final String name, required final int rank}) =
-      _$UserImpl;
+  const factory _User({
+    required final String name,
+    required final int rank,
+    required final String image,
+  }) = _$UserImpl;
 
   @override
   String get name;
   @override
   int get rank;
+  @override
+  String get image;
 
   /// Create a copy of User
   /// with the given fields replaced by the non-null parameter values.

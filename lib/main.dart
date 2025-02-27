@@ -32,6 +32,7 @@ class MyApp extends StatelessWidget {
           shadowColor: AppColor.black,
           elevation: 1,
         ),
+        scaffoldBackgroundColor: AppColor.white,
       ),
       localizationsDelegates: [
         AppLocalizations.delegate,

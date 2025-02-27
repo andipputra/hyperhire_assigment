@@ -1,7 +1,9 @@
 import 'package:hyperhire_assigment/data/models/banner.dart';
 import 'package:hyperhire_assigment/data/models/product.dart';
+import 'package:hyperhire_assigment/data/models/user.dart';
 import 'package:hyperhire_assigment/data/repositories/home_repository.dart';
 import 'package:hyperhire_assigment/data/repositories/product_repository.dart';
+import 'package:hyperhire_assigment/data/repositories/review_repository.dart';
 import 'package:hyperhire_assigment/ui/view_models/home/home_state.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
@@ -15,11 +17,13 @@ class HomeViewModel extends _$HomeViewModel {
 
     final bannerData = await _getBannerData();
     final topProducts = await _getTopProducts();
+    final topReviewers = await _getTopReviewers();
 
     return HomeState(
       listBanner: bannerData,
       currentBannerIndex: 0,
       topProducts: topProducts,
+      topReviewers: topReviewers,
     );
   }
 
@@ -34,4 +38,7 @@ class HomeViewModel extends _$HomeViewModel {
   Future<List<Product>> _getTopProducts() async {
     return ref.read(productRepositoryProvider).getTopProducts();
   }
+
+  Future<List<User>> _getTopReviewers() async =>
+      ref.read(reviewRepositoryProvider).getTopReviewers();
 }
