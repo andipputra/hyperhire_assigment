@@ -49,4 +49,41 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get homeFooterCopyright => '@2022-2022 LOGO Lab, Inc. (주)아무개  서울시 강남구';
+
+  @override
+  String profileAppBarRank(int rank) {
+    return '랭킹 $rank위';
+  }
+
+  @override
+  String get profileAppBarTitle => '베스트 리뷰어';
+
+  @override
+  String profileRank(String rank) {
+    String _temp0 = intl.Intl.selectLogic(
+      rank,
+      {
+        '1': '골드',
+        '2': '실버',
+        '3': '브론즈',
+        'other': '',
+      },
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get profileDescription => '조립컴 업체를 운영하며 리뷰를 작성합니다.';
+
+  @override
+  String get profileProductReview => '작성한 리뷰';
+
+  @override
+  String get profileProductReviewCount => '총 35개';
+
+  @override
+  String get profileProductReviewLatest => '최신순';
+
+  @override
+  String get profileProductReviewComment => '댓글 달기..';
 }

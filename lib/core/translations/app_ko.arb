@@ -55,5 +55,47 @@
   "homeFooterCopyright": "@2022-2022 LOGO Lab, Inc. (주)아무개  서울시 강남구",
   "@homeFooterCopyright": {
     "description": "Home Footer Copyright"
+  },
+  "profileAppBarRank": "랭킹 {rank}위",
+  "@profileAppBarRank": {
+    "description": "Profile AppBar Rank",
+    "placeholders": {
+      "rank": {
+        "type": "int"
+      }
+    }
+  },
+  "profileAppBarTitle": "베스트 리뷰어",
+  "@profileAppBarTitle": {
+    "description": "Profile AppBar Title"
+  },
+  "profileRank": "{rank, select, 1{골드} 2{실버} 3{브론즈} other{}}",
+  "@profileRank": {
+    "description": "Profile Rank",
+    "placeholders": {
+      "rank": {
+        "type": "String"
+      }
+    }
+  },
+  "profileDescription": "조립컴 업체를 운영하며 리뷰를 작성합니다.",
+  "@profileDescription": {
+    "description": "Profile Description"
+  },
+  "profileProductReview": "작성한 리뷰",
+  "@profileProductReview": {
+    "description": "Profile Product Review"
+  },
+  "profileProductReviewCount": "총 35개",
+  "@profileProductReviewCount": {
+    "description": "Profile Product Review Count"
+  },
+  "profileProductReviewLatest": "최신순",
+  "@profileProductReviewLatest": {
+    "description": "Profile Product Review Latest"
+  },
+  "profileProductReviewComment": "댓글 달기..",
+  "@profileProductReviewComment": {
+    "description": "Profile Product Review Comment"
   }
 }

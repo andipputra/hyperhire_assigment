@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 
 class AppTextStyle {
@@ -18,7 +16,6 @@ class AppTextStyle {
     height: 8.2 / 7,
     letterSpacing: -0.05,
   );
-
 
   static TextStyle textFieldHint = TextStyle(
     fontFamily: 'NotoSansKr',
@@ -97,6 +94,38 @@ class AppTextStyle {
     fontWeight: FontWeight.w400,
     fontSize: 13,
     height: 15.6 / 13,
+    letterSpacing: -0.05,
+  );
+
+  static TextStyle username = TextStyle(
+    fontFamily: 'NotoSansKr',
+    fontWeight: FontWeight.w400,
+    fontSize: 10,
+    height: 12 / 10,
+    letterSpacing: 0.0,
+  );
+
+  static TextStyle profileAppBarTitle = TextStyle(
+    fontFamily: 'NotoSansKr',
+    fontWeight: FontWeight.w500,
+    fontSize: 16,
+    height: 19.2 / 16,
+    letterSpacing: 0.0,
+  );
+
+  static TextStyle h1Bold = TextStyle(
+    fontFamily: 'NotoSansKr',
+    fontWeight: FontWeight.w500,
+    fontSize: 20,
+    height: 24 / 20,
+    letterSpacing: 0.0,
+  );
+
+  static TextStyle h3 = TextStyle(
+    fontFamily: 'NotoSansKr',
+    fontWeight: FontWeight.w500,
+    fontSize: 16,
+    height: 19.2 / 16,
     letterSpacing: -0.05,
   );
 

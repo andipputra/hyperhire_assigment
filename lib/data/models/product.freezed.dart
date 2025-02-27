@@ -20,11 +20,12 @@ mixin _$Product {
   int get rank => throw _privateConstructorUsedError;
   String get brand => throw _privateConstructorUsedError;
   String get type => throw _privateConstructorUsedError;
-  List<String> get comment => throw _privateConstructorUsedError;
+  List<ProductComment> get comment => throw _privateConstructorUsedError;
   double get reviewScore => throw _privateConstructorUsedError;
   int get reviewCount => throw _privateConstructorUsedError;
   String get image => throw _privateConstructorUsedError;
   List<String> get tag => throw _privateConstructorUsedError;
+  String? get reviewTime => throw _privateConstructorUsedError;
 
   /// Create a copy of Product
   /// with the given fields replaced by the non-null parameter values.
@@ -41,11 +42,12 @@ abstract class $ProductCopyWith<$Res> {
     int rank,
     String brand,
     String type,
-    List<String> comment,
+    List<ProductComment> comment,
     double reviewScore,
     int reviewCount,
     String image,
     List<String> tag,
+    String? reviewTime,
   });
 }
 
@@ -72,6 +74,7 @@ class _$ProductCopyWithImpl<$Res, $Val extends Product>
     Object? reviewCount = null,
     Object? image = null,
     Object? tag = null,
+    Object? reviewTime = freezed,
   }) {
     return _then(
       _value.copyWith(
@@ -94,7 +97,7 @@ class _$ProductCopyWithImpl<$Res, $Val extends Product>
                 null == comment
                     ? _value.comment
                     : comment // ignore: cast_nullable_to_non_nullable
-                        as List<String>,
+                        as List<ProductComment>,
             reviewScore:
                 null == reviewScore
                     ? _value.reviewScore
@@ -115,6 +118,11 @@ class _$ProductCopyWithImpl<$Res, $Val extends Product>
                     ? _value.tag
                     : tag // ignore: cast_nullable_to_non_nullable
                         as List<String>,
+            reviewTime:
+                freezed == reviewTime
+                    ? _value.reviewTime
+                    : reviewTime // ignore: cast_nullable_to_non_nullable
+                        as String?,
           )
           as $Val,
     );
@@ -133,11 +141,12 @@ abstract class _$$ProductImplCopyWith<$Res> implements $ProductCopyWith<$Res> {
     int rank,
     String brand,
     String type,
-    List<String> comment,
+    List<ProductComment> comment,
     double reviewScore,
     int reviewCount,
     String image,
     List<String> tag,
+    String? reviewTime,
   });
 }
 
@@ -163,6 +172,7 @@ class __$$ProductImplCopyWithImpl<$Res>
     Object? reviewCount = null,
     Object? image = null,
     Object? tag = null,
+    Object? reviewTime = freezed,
   }) {
     return _then(
       _$ProductImpl(
@@ -185,7 +195,7 @@ class __$$ProductImplCopyWithImpl<$Res>
             null == comment
                 ? _value._comment
                 : comment // ignore: cast_nullable_to_non_nullable
-                    as List<String>,
+                    as List<ProductComment>,
         reviewScore:
             null == reviewScore
                 ? _value.reviewScore
@@ -206,6 +216,11 @@ class __$$ProductImplCopyWithImpl<$Res>
                 ? _value._tag
                 : tag // ignore: cast_nullable_to_non_nullable
                     as List<String>,
+        reviewTime:
+            freezed == reviewTime
+                ? _value.reviewTime
+                : reviewTime // ignore: cast_nullable_to_non_nullable
+                    as String?,
       ),
     );
   }
@@ -213,16 +228,17 @@ class __$$ProductImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$ProductImpl implements _Product {
+class _$ProductImpl with DiagnosticableTreeMixin implements _Product {
   const _$ProductImpl({
     required this.rank,
     required this.brand,
     required this.type,
-    required final List<String> comment,
+    required final List<ProductComment> comment,
     required this.reviewScore,
     required this.reviewCount,
     required this.image,
     required final List<String> tag,
+    this.reviewTime,
   }) : _comment = comment,
        _tag = tag;
 
@@ -232,9 +248,9 @@ class _$ProductImpl implements _Product {
   final String brand;
   @override
   final String type;
-  final List<String> _comment;
+  final List<ProductComment> _comment;
   @override
-  List<String> get comment {
+  List<ProductComment> get comment {
     if (_comment is EqualUnmodifiableListView) return _comment;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_comment);
@@ -255,8 +271,27 @@ class _$ProductImpl implements _Product {
   }
 
   @override
-  String toString() {
-    return 'Product(rank: $rank, brand: $brand, type: $type, comment: $comment, reviewScore: $reviewScore, reviewCount: $reviewCount, image: $image, tag: $tag)';
+  final String? reviewTime;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'Product(rank: $rank, brand: $brand, type: $type, comment: $comment, reviewScore: $reviewScore, reviewCount: $reviewCount, image: $image, tag: $tag, reviewTime: $reviewTime)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'Product'))
+      ..add(DiagnosticsProperty('rank', rank))
+      ..add(DiagnosticsProperty('brand', brand))
+      ..add(DiagnosticsProperty('type', type))
+      ..add(DiagnosticsProperty('comment', comment))
+      ..add(DiagnosticsProperty('reviewScore', reviewScore))
+      ..add(DiagnosticsProperty('reviewCount', reviewCount))
+      ..add(DiagnosticsProperty('image', image))
+      ..add(DiagnosticsProperty('tag', tag))
+      ..add(DiagnosticsProperty('reviewTime', reviewTime));
   }
 
   @override
@@ -273,7 +308,9 @@ class _$ProductImpl implements _Product {
             (identical(other.reviewCount, reviewCount) ||
                 other.reviewCount == reviewCount) &&
             (identical(other.image, image) || other.image == image) &&
-            const DeepCollectionEquality().equals(other._tag, _tag));
+            const DeepCollectionEquality().equals(other._tag, _tag) &&
+            (identical(other.reviewTime, reviewTime) ||
+                other.reviewTime == reviewTime));
   }
 
   @override
@@ -287,6 +324,7 @@ class _$ProductImpl implements _Product {
     reviewCount,
     image,
     const DeepCollectionEquality().hash(_tag),
+    reviewTime,
   );
 
   /// Create a copy of Product
@@ -303,11 +341,12 @@ abstract class _Product implements Product {
     required final int rank,
     required final String brand,
     required final String type,
-    required final List<String> comment,
+    required final List<ProductComment> comment,
     required final double reviewScore,
     required final int reviewCount,
     required final String image,
     required final List<String> tag,
+    final String? reviewTime,
   }) = _$ProductImpl;
 
   @override
@@ -317,7 +356,7 @@ abstract class _Product implements Product {
   @override
   String get type;
   @override
-  List<String> get comment;
+  List<ProductComment> get comment;
   @override
   double get reviewScore;
   @override
@@ -326,11 +365,193 @@ abstract class _Product implements Product {
   String get image;
   @override
   List<String> get tag;
+  @override
+  String? get reviewTime;
 
   /// Create a copy of Product
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ProductImplCopyWith<_$ProductImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+mixin _$ProductComment {
+  String get comment => throw _privateConstructorUsedError;
+  List<String> get images => throw _privateConstructorUsedError;
+
+  /// Create a copy of ProductComment
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $ProductCommentCopyWith<ProductComment> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ProductCommentCopyWith<$Res> {
+  factory $ProductCommentCopyWith(
+    ProductComment value,
+    $Res Function(ProductComment) then,
+  ) = _$ProductCommentCopyWithImpl<$Res, ProductComment>;
+  @useResult
+  $Res call({String comment, List<String> images});
+}
+
+/// @nodoc
+class _$ProductCommentCopyWithImpl<$Res, $Val extends ProductComment>
+    implements $ProductCommentCopyWith<$Res> {
+  _$ProductCommentCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of ProductComment
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({Object? comment = null, Object? images = null}) {
+    return _then(
+      _value.copyWith(
+            comment:
+                null == comment
+                    ? _value.comment
+                    : comment // ignore: cast_nullable_to_non_nullable
+                        as String,
+            images:
+                null == images
+                    ? _value.images
+                    : images // ignore: cast_nullable_to_non_nullable
+                        as List<String>,
+          )
+          as $Val,
+    );
+  }
+}
+
+/// @nodoc
+abstract class _$$ProductCommentImplCopyWith<$Res>
+    implements $ProductCommentCopyWith<$Res> {
+  factory _$$ProductCommentImplCopyWith(
+    _$ProductCommentImpl value,
+    $Res Function(_$ProductCommentImpl) then,
+  ) = __$$ProductCommentImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({String comment, List<String> images});
+}
+
+/// @nodoc
+class __$$ProductCommentImplCopyWithImpl<$Res>
+    extends _$ProductCommentCopyWithImpl<$Res, _$ProductCommentImpl>
+    implements _$$ProductCommentImplCopyWith<$Res> {
+  __$$ProductCommentImplCopyWithImpl(
+    _$ProductCommentImpl _value,
+    $Res Function(_$ProductCommentImpl) _then,
+  ) : super(_value, _then);
+
+  /// Create a copy of ProductComment
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({Object? comment = null, Object? images = null}) {
+    return _then(
+      _$ProductCommentImpl(
+        comment:
+            null == comment
+                ? _value.comment
+                : comment // ignore: cast_nullable_to_non_nullable
+                    as String,
+        images:
+            null == images
+                ? _value._images
+                : images // ignore: cast_nullable_to_non_nullable
+                    as List<String>,
+      ),
+    );
+  }
+}
+
+/// @nodoc
+
+class _$ProductCommentImpl
+    with DiagnosticableTreeMixin
+    implements _ProductComment {
+  const _$ProductCommentImpl({
+    required this.comment,
+    final List<String> images = const [],
+  }) : _images = images;
+
+  @override
+  final String comment;
+  final List<String> _images;
+  @override
+  @JsonKey()
+  List<String> get images {
+    if (_images is EqualUnmodifiableListView) return _images;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_images);
+  }
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'ProductComment(comment: $comment, images: $images)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'ProductComment'))
+      ..add(DiagnosticsProperty('comment', comment))
+      ..add(DiagnosticsProperty('images', images));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ProductCommentImpl &&
+            (identical(other.comment, comment) || other.comment == comment) &&
+            const DeepCollectionEquality().equals(other._images, _images));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+    runtimeType,
+    comment,
+    const DeepCollectionEquality().hash(_images),
+  );
+
+  /// Create a copy of ProductComment
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ProductCommentImplCopyWith<_$ProductCommentImpl> get copyWith =>
+      __$$ProductCommentImplCopyWithImpl<_$ProductCommentImpl>(
+        this,
+        _$identity,
+      );
+}
+
+abstract class _ProductComment implements ProductComment {
+  const factory _ProductComment({
+    required final String comment,
+    final List<String> images,
+  }) = _$ProductCommentImpl;
+
+  @override
+  String get comment;
+  @override
+  List<String> get images;
+
+  /// Create a copy of ProductComment
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$ProductCommentImplCopyWith<_$ProductCommentImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

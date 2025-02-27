@@ -64,6 +64,7 @@ flutter:
     - assets/images/banner/
     - assets/images/product/
     - assets/images/profile/
+    - assets/images/comment/
     - assets/vector/
   fonts:
     - family: NotoSansKr

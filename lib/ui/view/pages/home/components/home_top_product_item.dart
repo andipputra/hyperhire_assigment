@@ -87,7 +87,7 @@ class HomeTopProductItem extends StatelessWidget {
                 physics: NeverScrollableScrollPhysics(),
                 itemBuilder:
                     (_, index) => Text(
-                      ' • ${product.comment[index]}',
+                      ' • ${product.comment[index].comment}',
                       style: AppTextStyle.body.copyWith(
                         color: AppColor.basicBlack,
                       ),
@@ -125,7 +125,7 @@ class HomeTopProductItem extends StatelessWidget {
                               vertical: 5,
                             ),
                             decoration: BoxDecoration(
-                              color: AppColor.lightGray,
+                              color: AppColor.liteGray,
                               borderRadius: BorderRadius.circular(6),
                             ),
                             child: Text(

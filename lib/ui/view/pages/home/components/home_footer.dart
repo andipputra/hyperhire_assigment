@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:hyperhire_assigment/core/theme/color.dart';
 import 'package:hyperhire_assigment/core/theme/text_style.dart';
@@ -13,7 +12,7 @@ class HomeFooter extends StatelessWidget {
     final translation = AppLocalizations.of(context);
 
     return Container(
-      decoration: BoxDecoration(color: AppColor.lightGray),
+      decoration: BoxDecoration(color: AppColor.liteGray),
       padding: EdgeInsets.symmetric(horizontal: 16, vertical: 20),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

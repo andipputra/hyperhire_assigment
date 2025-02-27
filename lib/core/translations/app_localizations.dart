@@ -176,6 +176,54 @@ abstract class AppLocalizations {
   /// In ko, this message translates to:
   /// **'@2022-2022 LOGO Lab, Inc. (주)아무개  서울시 강남구'**
   String get homeFooterCopyright;
+
+  /// Profile AppBar Rank
+  ///
+  /// In ko, this message translates to:
+  /// **'랭킹 {rank}위'**
+  String profileAppBarRank(int rank);
+
+  /// Profile AppBar Title
+  ///
+  /// In ko, this message translates to:
+  /// **'베스트 리뷰어'**
+  String get profileAppBarTitle;
+
+  /// Profile Rank
+  ///
+  /// In ko, this message translates to:
+  /// **'{rank, select, 1{골드} 2{실버} 3{브론즈} other{}}'**
+  String profileRank(String rank);
+
+  /// Profile Description
+  ///
+  /// In ko, this message translates to:
+  /// **'조립컴 업체를 운영하며 리뷰를 작성합니다.'**
+  String get profileDescription;
+
+  /// Profile Product Review
+  ///
+  /// In ko, this message translates to:
+  /// **'작성한 리뷰'**
+  String get profileProductReview;
+
+  /// Profile Product Review Count
+  ///
+  /// In ko, this message translates to:
+  /// **'총 35개'**
+  String get profileProductReviewCount;
+
+  /// Profile Product Review Latest
+  ///
+  /// In ko, this message translates to:
+  /// **'최신순'**
+  String get profileProductReviewLatest;
+
+  /// Profile Product Review Comment
+  ///
+  /// In ko, this message translates to:
+  /// **'댓글 달기..'**
+  String get profileProductReviewComment;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

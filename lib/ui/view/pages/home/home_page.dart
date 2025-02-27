@@ -21,7 +21,7 @@ class HomePage extends ConsumerWidget {
       appBar: AppBar(
         title: Text(
           translation?.homeAppBarTitle ?? '',
-          style: AppTextStyle.appBar,
+          style: AppTextStyle.appBar.copyWith(color: AppColor.iris),
         ),
       ),
       body: ListView(
@@ -30,7 +30,7 @@ class HomePage extends ConsumerWidget {
           HomeSearch(),
           HomeBanner(),
           HomeTopProduct(),
-          Divider(thickness: 16, color: AppColor.lightGray),
+          Divider(thickness: 16, color: AppColor.liteGray),
           HomeReviewer(),
           HomeFooter(),
         ],

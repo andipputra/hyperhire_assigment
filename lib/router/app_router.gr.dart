@@ -10,6 +10,8 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:auto_route/auto_route.dart' as _i3;
+import 'package:flutter/material.dart' as _i4;
+import 'package:hyperhire_assigment/data/models/user.dart' as _i5;
 import 'package:hyperhire_assigment/ui/view/pages/home/home_page.dart' as _i1;
 import 'package:hyperhire_assigment/ui/view/pages/profile/profile_page.dart'
     as _i2;
@@ -32,16 +34,37 @@ class HomeRoute extends _i3.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i2.ProfilePage]
-class ProfileRoute extends _i3.PageRouteInfo<void> {
-  const ProfileRoute({List<_i3.PageRouteInfo>? children})
-    : super(ProfileRoute.name, initialChildren: children);
+class ProfileRoute extends _i3.PageRouteInfo<ProfileRouteArgs> {
+  ProfileRoute({
+    _i4.Key? key,
+    required _i5.User user,
+    List<_i3.PageRouteInfo>? children,
+  }) : super(
+         ProfileRoute.name,
+         args: ProfileRouteArgs(key: key, user: user),
+         initialChildren: children,
+       );
 
   static const String name = 'ProfileRoute';
 
   static _i3.PageInfo page = _i3.PageInfo(
     name,
     builder: (data) {
-      return const _i2.ProfilePage();
+      final args = data.argsAs<ProfileRouteArgs>();
+      return _i2.ProfilePage(key: args.key, user: args.user);
     },
   );
+}
+
+class ProfileRouteArgs {
+  const ProfileRouteArgs({this.key, required this.user});
+
+  final _i4.Key? key;
+
+  final _i5.User user;
+
+  @override
+  String toString() {
+    return 'ProfileRouteArgs{key: $key, user: $user}';
+  }
 }
