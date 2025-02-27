@@ -99,6 +99,30 @@ abstract class AppLocalizations {
   /// **'LOGO'**
   String get homeAppBarTitle;
 
+  /// Home Bottom Bar Home
+  ///
+  /// In ko, this message translates to:
+  /// **'홈'**
+  String get homeBottomBarHome;
+
+  /// Home Bottom Bar Category
+  ///
+  /// In ko, this message translates to:
+  /// **'카테고리'**
+  String get homeBottomBarCategory;
+
+  /// Home Bottom Bar Community
+  ///
+  /// In ko, this message translates to:
+  /// **'커뮤니티'**
+  String get homeBottomBarCommunity;
+
+  /// Home Bottom Bar My Profile
+  ///
+  /// In ko, this message translates to:
+  /// **'마이페이지'**
+  String get homeBottomBarMyProfile;
+
   /// Home Search Hint
   ///
   /// In ko, this message translates to:

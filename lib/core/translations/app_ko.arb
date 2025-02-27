@@ -4,6 +4,22 @@
   "@homeAppBarTitle": {
     "description": "Home AppBar Title"
   },
+  "homeBottomBarHome": "홈",
+  "@homeBottomBarHome": {
+    "description": "Home Bottom Bar Home"
+  },
+  "homeBottomBarCategory": "카테고리",
+  "@homeBottomBarCategory": {
+    "description": "Home Bottom Bar Category"
+  },
+  "homeBottomBarCommunity": "커뮤니티",
+  "@homeBottomBarCommunity": {
+    "description": "Home Bottom Bar Community"
+  },
+  "homeBottomBarMyProfile": "마이페이지",
+  "@homeBottomBarMyProfile": {
+    "description": "Home Bottom Bar My Profile"
+  },
   "homeSearchHint": "검색어를 입력하세요",
   "@homeSearchHint": {
     "description": "Home Search Hint"

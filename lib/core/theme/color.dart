@@ -16,6 +16,9 @@ class AppColor {
   static const purple = Color(0xff3E3DC5);
   static const divider = Color(0xffC8C8C8);
   static const flashSilver = Color(0xffD7D7D7);
+  static const activeBottomNavBar = Color(0xff767D88);
+  static const midGrey = Color(0xffD9D9D9);
+
 
   static const textFieldGradient = [Color(0xff74FBDE), Color(0xff3C41BF)];
 }

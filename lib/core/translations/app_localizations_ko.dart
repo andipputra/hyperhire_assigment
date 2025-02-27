@@ -12,6 +12,18 @@ class AppLocalizationsKo extends AppLocalizations {
   String get homeAppBarTitle => 'LOGO';
 
   @override
+  String get homeBottomBarHome => '홈';
+
+  @override
+  String get homeBottomBarCategory => '카테고리';
+
+  @override
+  String get homeBottomBarCommunity => '커뮤니티';
+
+  @override
+  String get homeBottomBarMyProfile => '마이페이지';
+
+  @override
   String get homeSearchHint => '검색어를 입력하세요';
 
   @override
