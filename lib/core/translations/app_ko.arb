@@ -1,0 +1,15 @@
+{
+    "@@locale": "ko",
+    "homeSearchHint": "검색어를 입력하세요",
+    "@homeSearchHint": {
+        "description": "Home Search Hint"
+    },
+    "homeProductReviewLabel": "제일 핫한 리뷰를 만나보세요",
+    "@homeProductReviewLabel": {
+        "description": "Home Product Review Label"
+    },
+    "homeProductReviewRanking": "리뷰️  랭킹⭐ top 3",
+    "@homeProductReviewRanking": {
+        "description": "Home Product Review Ranking"
+    }
+}

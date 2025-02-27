@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hyperhire_assigment/core/theme/color.dart';
+import 'package:hyperhire_assigment/core/translations/app_localizations.dart';
 import 'package:hyperhire_assigment/router/app_router.dart';
 
 void main() {
@@ -30,14 +31,15 @@ class MyApp extends StatelessWidget {
           foregroundColor: AppColor.iris,
           shadowColor: AppColor.black,
           elevation: 1,
-        )
+        ),
       ),
       localizationsDelegates: [
+        AppLocalizations.delegate,
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
-      supportedLocales: [Locale('ko'), Locale('en')],
+      supportedLocales: AppLocalizations.supportedLocales,
       routerDelegate: AutoRouterDelegate(_appRoute),
       routeInformationParser: _appRoute.defaultRouteParser(),
     );

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hyperhire_assigment/ui/view/pages/home/components/home_banner.dart';
 import 'package:hyperhire_assigment/ui/view/pages/home/components/home_search.dart';
+import 'package:hyperhire_assigment/ui/view/pages/home/components/home_top_product.dart';
 
 @RoutePage()
 class HomePage extends ConsumerWidget {
@@ -17,6 +18,7 @@ class HomePage extends ConsumerWidget {
         children: [
           HomeSearch(),
           HomeBanner(),
+          HomeTopProduct(),
         ],
       )
     );

@@ -19,6 +19,7 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$HomeState {
   List<BannerData> get listBanner => throw _privateConstructorUsedError;
   int get currentBannerIndex => throw _privateConstructorUsedError;
+  List<Product> get topProducts => throw _privateConstructorUsedError;
 
   /// Create a copy of HomeState
   /// with the given fields replaced by the non-null parameter values.
@@ -32,7 +33,11 @@ abstract class $HomeStateCopyWith<$Res> {
   factory $HomeStateCopyWith(HomeState value, $Res Function(HomeState) then) =
       _$HomeStateCopyWithImpl<$Res, HomeState>;
   @useResult
-  $Res call({List<BannerData> listBanner, int currentBannerIndex});
+  $Res call({
+    List<BannerData> listBanner,
+    int currentBannerIndex,
+    List<Product> topProducts,
+  });
 }
 
 /// @nodoc
@@ -49,7 +54,11 @@ class _$HomeStateCopyWithImpl<$Res, $Val extends HomeState>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? listBanner = null, Object? currentBannerIndex = null}) {
+  $Res call({
+    Object? listBanner = null,
+    Object? currentBannerIndex = null,
+    Object? topProducts = null,
+  }) {
     return _then(
       _value.copyWith(
             listBanner:
@@ -62,6 +71,11 @@ class _$HomeStateCopyWithImpl<$Res, $Val extends HomeState>
                     ? _value.currentBannerIndex
                     : currentBannerIndex // ignore: cast_nullable_to_non_nullable
                         as int,
+            topProducts:
+                null == topProducts
+                    ? _value.topProducts
+                    : topProducts // ignore: cast_nullable_to_non_nullable
+                        as List<Product>,
           )
           as $Val,
     );
@@ -77,7 +91,11 @@ abstract class _$$HomeStateImplCopyWith<$Res>
   ) = __$$HomeStateImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({List<BannerData> listBanner, int currentBannerIndex});
+  $Res call({
+    List<BannerData> listBanner,
+    int currentBannerIndex,
+    List<Product> topProducts,
+  });
 }
 
 /// @nodoc
@@ -93,7 +111,11 @@ class __$$HomeStateImplCopyWithImpl<$Res>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? listBanner = null, Object? currentBannerIndex = null}) {
+  $Res call({
+    Object? listBanner = null,
+    Object? currentBannerIndex = null,
+    Object? topProducts = null,
+  }) {
     return _then(
       _$HomeStateImpl(
         listBanner:
@@ -106,6 +128,11 @@ class __$$HomeStateImplCopyWithImpl<$Res>
                 ? _value.currentBannerIndex
                 : currentBannerIndex // ignore: cast_nullable_to_non_nullable
                     as int,
+        topProducts:
+            null == topProducts
+                ? _value._topProducts
+                : topProducts // ignore: cast_nullable_to_non_nullable
+                    as List<Product>,
       ),
     );
   }
@@ -117,7 +144,9 @@ class _$HomeStateImpl implements _HomeState {
   const _$HomeStateImpl({
     final List<BannerData> listBanner = const [],
     this.currentBannerIndex = 0,
-  }) : _listBanner = listBanner;
+    final List<Product> topProducts = const [],
+  }) : _listBanner = listBanner,
+       _topProducts = topProducts;
 
   final List<BannerData> _listBanner;
   @override
@@ -131,10 +160,18 @@ class _$HomeStateImpl implements _HomeState {
   @override
   @JsonKey()
   final int currentBannerIndex;
+  final List<Product> _topProducts;
+  @override
+  @JsonKey()
+  List<Product> get topProducts {
+    if (_topProducts is EqualUnmodifiableListView) return _topProducts;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_topProducts);
+  }
 
   @override
   String toString() {
-    return 'HomeState(listBanner: $listBanner, currentBannerIndex: $currentBannerIndex)';
+    return 'HomeState(listBanner: $listBanner, currentBannerIndex: $currentBannerIndex, topProducts: $topProducts)';
   }
 
   @override
@@ -147,7 +184,11 @@ class _$HomeStateImpl implements _HomeState {
               _listBanner,
             ) &&
             (identical(other.currentBannerIndex, currentBannerIndex) ||
-                other.currentBannerIndex == currentBannerIndex));
+                other.currentBannerIndex == currentBannerIndex) &&
+            const DeepCollectionEquality().equals(
+              other._topProducts,
+              _topProducts,
+            ));
   }
 
   @override
@@ -155,6 +196,7 @@ class _$HomeStateImpl implements _HomeState {
     runtimeType,
     const DeepCollectionEquality().hash(_listBanner),
     currentBannerIndex,
+    const DeepCollectionEquality().hash(_topProducts),
   );
 
   /// Create a copy of HomeState
@@ -170,12 +212,15 @@ abstract class _HomeState implements HomeState {
   const factory _HomeState({
     final List<BannerData> listBanner,
     final int currentBannerIndex,
+    final List<Product> topProducts,
   }) = _$HomeStateImpl;
 
   @override
   List<BannerData> get listBanner;
   @override
   int get currentBannerIndex;
+  @override
+  List<Product> get topProducts;
 
   /// Create a copy of HomeState
   /// with the given fields replaced by the non-null parameter values.

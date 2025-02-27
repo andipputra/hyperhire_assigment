@@ -18,10 +18,13 @@ final _privateConstructorUsedError = UnsupportedError(
 /// @nodoc
 mixin _$Product {
   int get rank => throw _privateConstructorUsedError;
-  String get name => throw _privateConstructorUsedError;
+  String get brand => throw _privateConstructorUsedError;
+  String get type => throw _privateConstructorUsedError;
   List<String> get comment => throw _privateConstructorUsedError;
   double get reviewScore => throw _privateConstructorUsedError;
   int get reviewCount => throw _privateConstructorUsedError;
+  String get image => throw _privateConstructorUsedError;
+  List<String> get tag => throw _privateConstructorUsedError;
 
   /// Create a copy of Product
   /// with the given fields replaced by the non-null parameter values.
@@ -36,10 +39,13 @@ abstract class $ProductCopyWith<$Res> {
   @useResult
   $Res call({
     int rank,
-    String name,
+    String brand,
+    String type,
     List<String> comment,
     double reviewScore,
     int reviewCount,
+    String image,
+    List<String> tag,
   });
 }
 
@@ -59,10 +65,13 @@ class _$ProductCopyWithImpl<$Res, $Val extends Product>
   @override
   $Res call({
     Object? rank = null,
-    Object? name = null,
+    Object? brand = null,
+    Object? type = null,
     Object? comment = null,
     Object? reviewScore = null,
     Object? reviewCount = null,
+    Object? image = null,
+    Object? tag = null,
   }) {
     return _then(
       _value.copyWith(
@@ -71,10 +80,15 @@ class _$ProductCopyWithImpl<$Res, $Val extends Product>
                     ? _value.rank
                     : rank // ignore: cast_nullable_to_non_nullable
                         as int,
-            name:
-                null == name
-                    ? _value.name
-                    : name // ignore: cast_nullable_to_non_nullable
+            brand:
+                null == brand
+                    ? _value.brand
+                    : brand // ignore: cast_nullable_to_non_nullable
+                        as String,
+            type:
+                null == type
+                    ? _value.type
+                    : type // ignore: cast_nullable_to_non_nullable
                         as String,
             comment:
                 null == comment
@@ -91,6 +105,16 @@ class _$ProductCopyWithImpl<$Res, $Val extends Product>
                     ? _value.reviewCount
                     : reviewCount // ignore: cast_nullable_to_non_nullable
                         as int,
+            image:
+                null == image
+                    ? _value.image
+                    : image // ignore: cast_nullable_to_non_nullable
+                        as String,
+            tag:
+                null == tag
+                    ? _value.tag
+                    : tag // ignore: cast_nullable_to_non_nullable
+                        as List<String>,
           )
           as $Val,
     );
@@ -107,10 +131,13 @@ abstract class _$$ProductImplCopyWith<$Res> implements $ProductCopyWith<$Res> {
   @useResult
   $Res call({
     int rank,
-    String name,
+    String brand,
+    String type,
     List<String> comment,
     double reviewScore,
     int reviewCount,
+    String image,
+    List<String> tag,
   });
 }
 
@@ -129,10 +156,13 @@ class __$$ProductImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? rank = null,
-    Object? name = null,
+    Object? brand = null,
+    Object? type = null,
     Object? comment = null,
     Object? reviewScore = null,
     Object? reviewCount = null,
+    Object? image = null,
+    Object? tag = null,
   }) {
     return _then(
       _$ProductImpl(
@@ -141,10 +171,15 @@ class __$$ProductImplCopyWithImpl<$Res>
                 ? _value.rank
                 : rank // ignore: cast_nullable_to_non_nullable
                     as int,
-        name:
-            null == name
-                ? _value.name
-                : name // ignore: cast_nullable_to_non_nullable
+        brand:
+            null == brand
+                ? _value.brand
+                : brand // ignore: cast_nullable_to_non_nullable
+                    as String,
+        type:
+            null == type
+                ? _value.type
+                : type // ignore: cast_nullable_to_non_nullable
                     as String,
         comment:
             null == comment
@@ -161,6 +196,16 @@ class __$$ProductImplCopyWithImpl<$Res>
                 ? _value.reviewCount
                 : reviewCount // ignore: cast_nullable_to_non_nullable
                     as int,
+        image:
+            null == image
+                ? _value.image
+                : image // ignore: cast_nullable_to_non_nullable
+                    as String,
+        tag:
+            null == tag
+                ? _value._tag
+                : tag // ignore: cast_nullable_to_non_nullable
+                    as List<String>,
       ),
     );
   }
@@ -171,16 +216,22 @@ class __$$ProductImplCopyWithImpl<$Res>
 class _$ProductImpl implements _Product {
   const _$ProductImpl({
     required this.rank,
-    required this.name,
+    required this.brand,
+    required this.type,
     required final List<String> comment,
     required this.reviewScore,
     required this.reviewCount,
-  }) : _comment = comment;
+    required this.image,
+    required final List<String> tag,
+  }) : _comment = comment,
+       _tag = tag;
 
   @override
   final int rank;
   @override
-  final String name;
+  final String brand;
+  @override
+  final String type;
   final List<String> _comment;
   @override
   List<String> get comment {
@@ -193,10 +244,19 @@ class _$ProductImpl implements _Product {
   final double reviewScore;
   @override
   final int reviewCount;
+  @override
+  final String image;
+  final List<String> _tag;
+  @override
+  List<String> get tag {
+    if (_tag is EqualUnmodifiableListView) return _tag;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_tag);
+  }
 
   @override
   String toString() {
-    return 'Product(rank: $rank, name: $name, comment: $comment, reviewScore: $reviewScore, reviewCount: $reviewCount)';
+    return 'Product(rank: $rank, brand: $brand, type: $type, comment: $comment, reviewScore: $reviewScore, reviewCount: $reviewCount, image: $image, tag: $tag)';
   }
 
   @override
@@ -205,22 +265,28 @@ class _$ProductImpl implements _Product {
         (other.runtimeType == runtimeType &&
             other is _$ProductImpl &&
             (identical(other.rank, rank) || other.rank == rank) &&
-            (identical(other.name, name) || other.name == name) &&
+            (identical(other.brand, brand) || other.brand == brand) &&
+            (identical(other.type, type) || other.type == type) &&
             const DeepCollectionEquality().equals(other._comment, _comment) &&
             (identical(other.reviewScore, reviewScore) ||
                 other.reviewScore == reviewScore) &&
             (identical(other.reviewCount, reviewCount) ||
-                other.reviewCount == reviewCount));
+                other.reviewCount == reviewCount) &&
+            (identical(other.image, image) || other.image == image) &&
+            const DeepCollectionEquality().equals(other._tag, _tag));
   }
 
   @override
   int get hashCode => Object.hash(
     runtimeType,
     rank,
-    name,
+    brand,
+    type,
     const DeepCollectionEquality().hash(_comment),
     reviewScore,
     reviewCount,
+    image,
+    const DeepCollectionEquality().hash(_tag),
   );
 
   /// Create a copy of Product
@@ -235,22 +301,31 @@ class _$ProductImpl implements _Product {
 abstract class _Product implements Product {
   const factory _Product({
     required final int rank,
-    required final String name,
+    required final String brand,
+    required final String type,
     required final List<String> comment,
     required final double reviewScore,
     required final int reviewCount,
+    required final String image,
+    required final List<String> tag,
   }) = _$ProductImpl;
 
   @override
   int get rank;
   @override
-  String get name;
+  String get brand;
+  @override
+  String get type;
   @override
   List<String> get comment;
   @override
   double get reviewScore;
   @override
   int get reviewCount;
+  @override
+  String get image;
+  @override
+  List<String> get tag;
 
   /// Create a copy of Product
   /// with the given fields replaced by the non-null parameter values.

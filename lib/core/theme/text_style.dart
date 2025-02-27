@@ -1,4 +1,6 @@
-import 'dart:ui';
+
+
+import 'package:flutter/material.dart';
 
 class AppTextStyle {
   static TextStyle appBar = TextStyle(
@@ -8,6 +10,15 @@ class AppTextStyle {
     height: 1,
     letterSpacing: 0.001,
   );
+
+  static TextStyle rank = TextStyle(
+    fontFamily: 'Roboto',
+    fontWeight: FontWeight.w700,
+    fontSize: 7,
+    height: 8.2 / 7,
+    letterSpacing: -0.05,
+  );
+
 
   static TextStyle textFieldHint = TextStyle(
     fontFamily: 'NotoSansKr',
