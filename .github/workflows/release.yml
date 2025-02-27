@@ -1,0 +1,48 @@
+on:
+  push:
+    branches:
+      - main
+
+name: "Build & Release"
+
+jobs:
+  build:
+    name: Build Apk
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+    
+      - uses: actions/setup-java@v1
+        with:
+            java-version: '17.x'
+
+      - name: Setup Flutter Version Management CLI
+        uses: flutter-actions/setup-fvm@v1
+
+      - name: Install Flutter SDK
+        run: echo yes | fvm use stable
+
+      - name: Print Flutter SDK version
+        run: fvm flutter --version
+
+      - name: Clean Depedencies
+        run: fvm flutter clean
+
+      - name: Install Depedencies
+        run: fvm flutter pub get
+
+      - name: Clean generated data
+        run: fvm dart run build_runner clean
+
+      - name: Generate Data
+        run: fvm dart run build_runner build -d
+
+      - name: Build APK
+        run: fvm flutter build apk --release
+
+      - name: Push to Releases
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: "build/app/outputs/apk/release/*"
+          tag: v1.0.${{ github.run_number }}
+          token: ${{ secrets.TOKEN }}
