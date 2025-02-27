@@ -1,5 +1,9 @@
 {
   "@@locale": "ko",
+  "homeAppBarTitle": "LOGO",
+  "@homeAppBarTitle": {
+    "description": "Home AppBar Title"
+  },
   "homeSearchHint": "검색어를 입력하세요",
   "@homeSearchHint": {
     "description": "Home Search Hint"

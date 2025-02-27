@@ -2,6 +2,8 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hyperhire_assigment/core/theme/color.dart';
+import 'package:hyperhire_assigment/core/theme/text_style.dart';
+import 'package:hyperhire_assigment/core/translations/app_localizations.dart';
 import 'package:hyperhire_assigment/ui/view/pages/home/components/home_banner.dart';
 import 'package:hyperhire_assigment/ui/view/pages/home/components/home_footer.dart';
 import 'package:hyperhire_assigment/ui/view/pages/home/components/home_reviewer.dart';
@@ -14,8 +16,14 @@ class HomePage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final translation = AppLocalizations.of(context);
     return Scaffold(
-      appBar: AppBar(title: const Text("LOGO")),
+      appBar: AppBar(
+        title: Text(
+          translation?.homeAppBarTitle ?? '',
+          style: AppTextStyle.appBar,
+        ),
+      ),
       body: ListView(
         shrinkWrap: true,
         children: [

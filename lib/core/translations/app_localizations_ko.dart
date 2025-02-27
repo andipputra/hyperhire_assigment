@@ -9,6 +9,9 @@ class AppLocalizationsKo extends AppLocalizations {
   AppLocalizationsKo([String locale = 'ko']) : super(locale);
 
   @override
+  String get homeAppBarTitle => 'LOGO';
+
+  @override
   String get homeSearchHint => '검색어를 입력하세요';
 
   @override

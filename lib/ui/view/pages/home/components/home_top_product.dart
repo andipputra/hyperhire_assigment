@@ -21,6 +21,7 @@ class HomeTopProduct extends ConsumerWidget {
       child: Column(
         spacing: 14,
         children: [
+          /// Top Product Title
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             spacing: 16,
@@ -35,7 +36,7 @@ class HomeTopProduct extends ConsumerWidget {
                   ),
                   Text(
                     translation?.homeProductReviewRanking ?? '',
-                    style: AppTextStyle.h2,
+                    style: AppTextStyle.h2.copyWith(color: AppColor.black),
                   ),
                 ],
               ),
@@ -43,6 +44,7 @@ class HomeTopProduct extends ConsumerWidget {
             ],
           ),
 
+          /// Top Product List
           ListView.separated(
             shrinkWrap: true,
             physics: NeverScrollableScrollPhysics(),

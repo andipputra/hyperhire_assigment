@@ -93,6 +93,12 @@ abstract class AppLocalizations {
     Locale('ko')
   ];
 
+  /// Home AppBar Title
+  ///
+  /// In ko, this message translates to:
+  /// **'LOGO'**
+  String get homeAppBarTitle;
+
   /// Home Search Hint
   ///
   /// In ko, this message translates to:

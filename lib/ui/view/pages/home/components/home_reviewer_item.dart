@@ -30,7 +30,10 @@ class HomeReviewerItem extends StatelessWidget {
             ),
             Text(
               reviewer.name,
-              style: AppTextStyle.h4.copyWith(color: AppColor.gray),
+              style: AppTextStyle.h4.copyWith(
+                color: AppColor.gray,
+                letterSpacing: -0.02,
+              ),
             ),
           ],
         ),

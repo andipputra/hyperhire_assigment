@@ -19,8 +19,10 @@ class HomeReviewer extends ConsumerWidget {
     return Padding(
       padding: EdgeInsets.symmetric(vertical: 18),
       child: Column(
+        spacing: 14,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          /// Reviewer Title
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 16),
             child: Column(
@@ -33,12 +35,13 @@ class HomeReviewer extends ConsumerWidget {
                 ),
                 Text(
                   translation?.homeReviewerRanking ?? '',
-                  style: AppTextStyle.h2,
+                  style: AppTextStyle.h2.copyWith(color: AppColor.black),
                 ),
               ],
             ),
           ),
-          SizedBox(height: 18),
+
+          /// Reviewer List
           ConstrainedBox(
             constraints: BoxConstraints(maxHeight: 110),
             child: ListView.separated(

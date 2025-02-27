@@ -87,7 +87,7 @@ class HomeTopProductItem extends StatelessWidget {
                 physics: NeverScrollableScrollPhysics(),
                 itemBuilder:
                     (_, index) => Text(
-                      '• ${product.comment[index]}',
+                      ' • ${product.comment[index]}',
                       style: AppTextStyle.body.copyWith(
                         color: AppColor.basicBlack,
                       ),
@@ -98,14 +98,13 @@ class HomeTopProductItem extends StatelessWidget {
               ),
               SizedBox(height: 6),
               Row(
+                spacing: 2,
                 children: [
-                  Icon(Icons.star_rounded, color: AppColor.gold),
-                  SizedBox(width: 3),
+                  Icon(Icons.star_rounded, color: AppColor.gold, size: 12),
                   Text(
                     product.reviewScore.toString(),
                     style: AppTextStyle.score.copyWith(color: AppColor.gold),
                   ),
-                  SizedBox(width: 2),
                   Text(
                     '(${product.reviewCount.toString()})',
                     style: AppTextStyle.score.copyWith(
