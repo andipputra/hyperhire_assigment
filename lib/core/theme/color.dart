@@ -9,6 +9,7 @@ class AppColor {
   static const demiGray = Color(0xff868686);
   static const lightGray = Color(0xffF0F0F0);
   static const gold = Color(0xffFFD233);
+  static const purple = Color(0xff3E3DC5);
 
-  static const textFieldGradient = [Color(0xff3C41BF), Color(0xff74FBDE)];
+  static const textFieldGradient = [Color(0xff74FBDE), Color(0xff3C41BF)];
 }
